@@ -8,7 +8,7 @@ const session = require('./session');
 
 const server = http.createServer();
 
-const io = socketio(server, { cors: { origin: '*' } });
+const io = socketio(server);
 
 io.on(action.CONNECTION, async function (socket) {
   const showtime_id = socket.handshake.query.showtime_id;
